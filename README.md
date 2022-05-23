@@ -1,6 +1,8 @@
 # HyperFrame-Pinpoint
 - 업로드된 바이너리는 HyperFrame Pinpoint 제품 설치를 위한 파일
 
+<br>
+
 ## 설치 파일
 ### Hbase
 * Verison : hbase-1.2.7-bin.tar.gz
@@ -17,8 +19,12 @@
 ### Pinpoint 지원 Java Version
 * java7 이상 지원
 
+<br>
+
 ## 검증 환경
 * CentOS Linux release 7.9.2009
+
+<br>
 
 ## 설치 및 실행
 
@@ -83,13 +89,13 @@
     
 ### 10) 애플리케이션 Agent 연결 및 실행
     
-    $ java -jar -javaagnet:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar \
+    $ java -jar -javaagent:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar \
                 -Dpinpoint.agentId=${AGENT_ID} \ # 고유 ID 
                 -Dpinpoint.applicationName=${APPLICATION_NAME} \ # 그룹 NAME
                 ${APPLICATION_HOME}/${APPLICATION} 
   
-
-
+  
+<br>
 
 ## Tomcat Agent 연동 
 
@@ -115,8 +121,15 @@
 ### 4) 연동 및 모니터링 확인
 * 기동 순서는 Pinpoint Collector, Pinpoint Web, Tomcat(Pinpoint Agent) 순서이다
 
+<br>
 
-# 로그 정보
+## Pinpoint Web 접속
+* http://${PINPOINT_SERVER_IP}:8080 (port는 Pinpoint Web 실행 시 지정한 port / default: 8080)
+
+<br>
+
+
+## 로그 정보
 ### Pinpoint 로그 경로
 - Pinpoint Collector
  
