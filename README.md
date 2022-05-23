@@ -38,10 +38,12 @@
 
     $ cd ${HBASE_HOME}/conf
     $ vi hbase-env.sh 
-      # The java implementation to use. Java 1.7+ required.
-      export JAVA_HOME=${JAVA_HOME}
-              
-              
+    ...
+    # The java implementation to use. Java 1.7+ required.
+    export JAVA_HOME=${JAVA_HOME}
+    ...
+    
+    
 ### 3) Hbase 실행
 
     $ cd ${HBASE_HOME}/bin
@@ -83,16 +85,18 @@
    
     $ cd ${AGENT_HOME}
     $ vi pinpoint-root.config
-      profiler.transport.grpc.collector.ip=${PINPOINT_SERVER_IP}
-      profiler.collector.ip=${PINPOINT_SERVER_IP}
-    
+    ...
+    profiler.transport.grpc.collector.ip=${PINPOINT_SERVER_IP}
+    ...
+    profiler.collector.ip=${PINPOINT_SERVER_IP}
+    ...
     
 ### 10) 애플리케이션 Agent 연결 및 실행
     
     $ java -jar -javaagent:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar \
-                -Dpinpoint.agentId=${AGENT_ID} \ # 고유 ID 
-                -Dpinpoint.applicationName=${APPLICATION_NAME} \ # 그룹 NAME
-                ${APPLICATION_HOME}/${APPLICATION} 
+      -Dpinpoint.agentId=${AGENT_ID} \ # 고유 ID 
+      -Dpinpoint.applicationName=${APPLICATION_NAME} \ # 그룹 NAME
+      ${APPLICATION_HOME}/${APPLICATION} 
   
   
 <br>
@@ -108,10 +112,11 @@
 ### 2) catalina.sh 옵션 추가
     $ cd ${TOMCAT_HOME}/bin
     $ vi catalina.sh
-      CATALINA_OPTS="$CATALINA_OPTS -javaagent:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar"
-      CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.agentId=${AGENT_ID}" # 고유 ID
-      CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.applicationName=${APPLICATION_NAME}" # 그룹 NAME
- 
+    ...
+    CATALINA_OPTS="$CATALINA_OPTS -javaagent:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar"
+    CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.agentId=${AGENT_ID}" # 고유 ID
+    CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.applicationName=${APPLICATION_NAME}" # 그룹 NAME
+    ...
  
 ### 3) Tomcat 실행
     $ cd {TOMCAT_HOME}/bin
@@ -124,7 +129,8 @@
 <br>
 
 ## Pinpoint Web 접속
-* http://${PINPOINT_SERVER_IP}:8080 (port는 Pinpoint Web 실행 시 지정한 port / default: 8080)
+* http://${PINPOINT_SERVER_IP}:${PORT}
+* ${PORT}는 Pinpoint Web 실행 시 지정한 port / default: 8080
 
 <br>
 
