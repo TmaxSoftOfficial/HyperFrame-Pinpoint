@@ -83,10 +83,10 @@
     
 ### 10) 애플리케이션 Agent 연결 및 실행
     
-    $ java -jar -javaagnet:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar
-                -Dpinpoint.agentId=${AGENT_ID} # 고유 ID
-                -Dpinpoint.applicationName=${APPLICATION_NAME} # 그룹 NAME
-                ${APPLICATION_HOME}/${APPLICATION}
+    $ java -jar -javaagnet:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar \
+                -Dpinpoint.agentId=${AGENT_ID} \ # 고유 ID 
+                -Dpinpoint.applicationName=${APPLICATION_NAME} \ # 그룹 NAME
+                ${APPLICATION_HOME}/${APPLICATION} 
   
 
 
