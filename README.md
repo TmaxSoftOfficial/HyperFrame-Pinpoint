@@ -7,15 +7,19 @@
 ### Hbase
 * Verison : hbase-1.2.7-bin.tar.gz
 * Note : https://archive.apache.org/dist/hbase/1.2.7/
+* Pinpoint로부터 수집된 데이터 저장
 ### Pinpoint Collector
 * Version : pinpoint-collector-boot-2.3.3.jar
 * Note : https://github.com/pinpoint-apm/pinpoint/releases/tag/v2.3.3
+* Agent가 설치된 Application의 데이터 수집
 ### Pinpoint Web
 * version : pinpoint-web-boot-2.3.3.jar
 * Note : https://github.com/pinpoint-apm/pinpoint/releases/tag/v2.3.3
+* 모니터링 용 Web UI 제공
 ### Pinpoint Agent
 * version : pinpoint-agent-2.3.3.tar.gz
 * Note : https://github.com/pinpoint-apm/pinpoint/releases/tag/v2.3.3
+* 모니터링 할 Application의 데이터 계측
 ### Pinpoint 지원 Java Version
 * java7 이상 지원
 
