@@ -11,7 +11,7 @@
 ### Pinpoint Collector
 * Version : pinpoint-collector-boot-2.3.3.jar
 * Note : https://github.com/pinpoint-apm/pinpoint/releases/tag/v2.3.3
-* Agent가 설치된 Application의 데이터 수집
+* Agent의 데이터 수집
 ### Pinpoint Web
 * version : pinpoint-web-boot-2.3.3.jar
 * Note : https://github.com/pinpoint-apm/pinpoint/releases/tag/v2.3.3
