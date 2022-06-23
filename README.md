@@ -54,24 +54,24 @@
     $ ./start-hbase.sh
     
     
-### 5) Hbase 스키마 생성
-#### 5-1. 아래 경로에 hbase-create.hbase 첨부파일 다운로드 (hbase-create.hbase 스크립트 없을 시)
+### 4) Hbase 스키마 생성
+#### 4-1. 아래 경로에 hbase-create.hbase 첨부파일 다운로드 (hbase-create.hbase 스크립트 없을 시)
 
       $ ${HBASE_HOME}/bin/hbase-create.hbase
     
-#### 5-2. 스키마 생성
+#### 4-2. 스키마 생성
 
     $ cd ${HBASE_HOME}/bin
     $ ./hbase shell ./hbase-create.hbase
        
        
-### 6) Pinpoint Collector 실행
+### 5) Pinpoint Collector 실행
 
     $ cd ${COLLECTOR_HOME}
     $ java -jar -Dpinpoint.zookeeper.address=${PINPOINT_SERVER_IP} pinpoint-collector-boot-2.3.3.jar
     
     
-### 7) Pinpoint Web 실행
+### 6) Pinpoint Web 실행
 
     $ cd ${WEB_HOME}
     $ java -jar -Dpinpoint.zookeeper.address=${PINPOINT_SERVER_IP} pinpoint-web-boot-2.3.3.jar
@@ -79,13 +79,13 @@
     port 변경하여 실행하는 경우 (기본 port는 8080)
     $ java -jar -Dpinpoint.zookeeper.address=${PINPOINT_SERVER_IP} -Dserver.port=${PORT} pinpoint-web-boot-2.3.3.jar
     
-### 8) Pinpoint Agent 압축 풀기
+### 7) Pinpoint Agent 압축 풀기
 
     $ cd ${INSTALLER_HOME}
     $ tar -zxf pinpoint-agent-2.3.3.tar.gz
     
     
-### 9) Pinpoint Agent 환경 설정
+### 8) Pinpoint Agent 환경 설정
    
     $ cd ${AGENT_HOME}
     $ vi pinpoint-root.config
@@ -95,7 +95,7 @@
     profiler.collector.ip=${PINPOINT_SERVER_IP}
     ...
     
-### 10) 애플리케이션 Agent 연결 및 실행
+### 9) 애플리케이션 Agent 연결 및 실행
     
     $ java -jar -javaagent:${AGENT_HOME}/pinpoint-bootstrap-2.3.3.jar \
       -Dpinpoint.agentId=${AGENT_ID} \ # 고유 ID 
