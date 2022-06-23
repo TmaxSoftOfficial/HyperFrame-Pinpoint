@@ -133,7 +133,7 @@
 <br>
 
 ## Pinpoint Web 접속
-* http://${PINPOINT_SERVER_IP}:${PORT}
+* `http://${PINPOINT_SERVER_IP}:${PORT}`
 * ${PORT}는 Pinpoint Web 실행 시 지정한 port / default: 8080
 
 <br>
