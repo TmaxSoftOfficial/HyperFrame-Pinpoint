@@ -230,6 +230,30 @@ $ ./startup.sh
 
 <br>
 
+## 웹 정보
+
+### Server Map
+
+- 서버 간의 상호 관계를 파악할 수 있다.
+
+### Call Stack
+
+- API 호출 정보
+    - Response Summary (응답 결과 요약)
+    - Response Avg & Max
+    - Load (시간별 트랜잭션 응답 결과)
+    - Load Avg & Max
+
+### Inspector
+
+- 실시간 운영 환경 정보
+    - CPU 사용량
+    - 메모리 사용량
+    - 스레드 개수
+    - etc
+        
+<br>
+
 ## 로그 정보
 
 ### Pinpoint 로그 경로
