@@ -234,15 +234,19 @@ $ ./startup.sh
 
 ### Server Map
 
-- 서버 간의 상호 관계를 파악할 수 있다.
+- 애플리케이션 구성을 한 눈에 파악
+- 노드 간에 호출된 건 수를 파악
+- 필터를 통한 특정 요청에 대해서 조회 가능
 
-### Call Stack
+### CallStack
 
-- API 호출 정보
+- API 호출 정보 시각화
     - Response Summary (응답 결과 요약)
     - Response Avg & Max
     - Load (시간별 트랜잭션 응답 결과)
     - Load Avg & Max
+- CallStack Trace
+    - Trace View를 제공하여 오류나 병목 발생 지점 발견 가능
 
 ### Inspector
 
