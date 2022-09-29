@@ -197,7 +197,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Dpinpoint.applicationName=${APPLICATION_NAME}" # 
 
 ```
 
-1. [setenv.sh](http://setenv.sh) 옵션 설정
+2. [setenv.sh](http://setenv.sh) 옵션 설정
 
 ```
 $ cd ${TOMCAT_HOME}/bin
